@@ -10,6 +10,8 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+
     export default {
         computed: {
           users() {
@@ -18,7 +20,7 @@
         },
         methods: {
             registerUser(user) {
-                this.$store.commit('register', user.id);
+                this.$store.dispatch('register', user.id);
             }
         }
     }
